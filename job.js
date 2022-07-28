@@ -1,5 +1,5 @@
 const jobs = ["Lau nhà", "Giặt áo quần", "Nấu cơm", "Đón con", "Rửa chén"];
-
+const enterKey = 13;
 function renderJobs(){
     let htmls = "";
     for(let i = 0; i < jobs.length; i++){
@@ -91,6 +91,12 @@ function saveJob(index){
     }
     jobs[index] = newJobname;
     reset(index);
+}
+
+function pressEnter(e){
+    if(e.keyCode == enterKey){
+        addJob();
+    }
 }
 function main(){
     renderJobs();

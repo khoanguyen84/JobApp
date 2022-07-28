@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="create-job">
-            <input type="text" id="jobName" placeholder="Enter job name">
+            <input onkeypress="pressEnter(event)" type="text" id="jobName" placeholder="Enter job name">
             <button onclick="addJob()" class="btn btn-primary">Add</button>
         </div>
         <div class="list-job">
