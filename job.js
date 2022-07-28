@@ -67,7 +67,8 @@ function removeJob(index){
 function editJob(index){
     let tr = document.querySelector(`#tr_${index}`);
     let oldJobname = jobs[index];
-    tr.children[1].innerHTML = `<input id="jobname_${index}" class="form-control" type="text" value="${oldJobname}">`;
+    tr.children[1].innerHTML = `<input onfocus="this.select();" id="jobname_${index}" class="form-control" type="text" value="${oldJobname}">`;
+    document.querySelector(`#jobname_${index}`).focus();
     document.querySelector(`#btnEdit_${index}`).classList.add('d-none');
     document.querySelector(`#btnSave_${index}`).classList.remove('d-none');
     document.querySelector(`#btnCancel_${index}`).classList.remove('d-none');
